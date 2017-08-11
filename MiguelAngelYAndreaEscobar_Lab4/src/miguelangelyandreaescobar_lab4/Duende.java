@@ -2,7 +2,7 @@ package miguelangelyandreaescobar_lab4;
 
 import java.awt.Color;
 
-public class Duende extends Pieza{
+public class Duende extends Pieza {
 
     public Duende() {
     }
@@ -15,29 +15,26 @@ public class Duende extends Pieza{
     public String toString() {
         return "D";
     }
-    
 
     @Override
-    public boolean movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
+    public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
         Pieza x = new EspacioBlanco();
-        boolean devolver= false;
+        int move = 0;
         if (color == Color.BLACK) {
             if (matriz[moverx][movery] == x) {
-                devolver= true;
-            } else{
-                devolver =false;
+                move = 1;
+            } else {
+                move = 2;
             }
-        }
-        else if (color == Color.BLACK) {
+        } else if (color == Color.WHITE) {
             if (matriz[moverx][movery] == x) {
-                devolver=true;
-            } else{
-                devolver=false;
+                move = 1;
+            } else {
+                move = 2;
             }
         }
-        return devolver;
-    }
-    
-    
-}
+        return move;
 
+    }
+
+}
