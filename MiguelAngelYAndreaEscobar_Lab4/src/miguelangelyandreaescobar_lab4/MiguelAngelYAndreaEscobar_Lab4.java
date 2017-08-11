@@ -27,6 +27,7 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                     + "b- Eliminar Jugador\n"
                     + "c- Listar Jugador\n"
                     + "d- Modificar Jugador\n"
+                    + "e- Jugar \n"
                     + "f- Salir \n");
             if (opcion.equals("a")) {
                 String nombre = "", lugarNacimiento = "", username = "", contrasena = "", sexo = "";
@@ -69,6 +70,10 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                 ListJugadores.get(pos).setSexo(opcion);
                 ListJugadores.get(pos).setUsername(username);
             }
+            if (opcion.equalsIgnoreCase("e")) {
+                JOptionPane.showMessageDialog(null, "BIENVENIDO AL JUEGO");
+
+            }
 
         }
     }
@@ -102,25 +107,34 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                 x[i][j] = new EspacioBlanco();
             }
         }
-        x[8][0] = new Caballero(Color.BLACK, material_Player2);
+        x[8][0] = new Duende(Color.BLACK, material_Player2);
         x[8][1] = new EspacioBlanco();
-        x[8][2] = new Dragon(Color.BLACK, material_Player2);
-        x[8][3] = new Arquero(Color.BLACK, material_Player2);
-        x[8][4] = new Rey(Color.BLACK, material_Player2);
-        x[8][5] = new Mago(Color.BLACK, material_Player2);
-        x[8][6] = new Arquero(Color.BLACK, material_Player2);
-        x[8][7] = new Dragon(Color.BLACK, material_Player2);
+        x[8][2] = new Arquero(Color.BLACK, material_Player2);
+        x[8][3] = new Duende(Color.BLACK, material_Player2);
+        x[8][4] = new Dragon(Color.BLACK, material_Player2);
+        x[8][5] = new Caballero(Color.BLACK, material_Player2);
+        x[8][6] = new Duende(Color.BLACK, material_Player2);
+        x[8][7] = new Arquero(Color.BLACK, material_Player2);
         x[8][8] = new EspacioBlanco();
-        x[8][9] = new Caballero(Color.BLACK, material_Player2);
-        x[9][0] = new Dragon(Color.BLACK, material_Player2);
+        x[8][9] = new Duende(Color.BLACK, material_Player2);
+        x[9][0] = new Caballero(Color.BLACK, material_Player2);
         x[9][1] = new EspacioBlanco();
-        x[9][2] = new Arquero(Color.BLACK, material_Player2);
-        x[9][3] = new Duende(Color.BLACK, material_Player2);
-        x[9][4] = new Caballero(Color.BLACK, material_Player2);
-        x[9][5] = new Dragon(Color.BLACK, material_Player2);
-        x[9][6] = new Duende(Color.BLACK, material_Player2);
-        x[9][7] = new Arquero(Color.BLACK, material_Player2);
+        x[9][2] = new Dragon(Color.BLACK, material_Player2);
+        x[9][3] = new Arquero(Color.BLACK, material_Player2);
+        x[9][4] = new Mago(Color.BLACK, material_Player2);
+        x[9][5] = new Rey(Color.BLACK, material_Player2);
+        x[9][6] = new Arquero(Color.BLACK, material_Player2);
+        x[9][7] = new Dragon(Color.BLACK, material_Player2);
         x[9][8] = new EspacioBlanco();
-        x[9][9] = new Duende(Color.BLACK, material_Player2);
+        x[9][9] = new Caballero(Color.BLACK, material_Player2);
+    }
+
+    public static void imprimir(Pieza[][] x) {
+        String matriz[][] = new String[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                matriz[i][j] = x[i][j].toString();
+            }
+        }
     }
 }
