@@ -11,17 +11,19 @@ import java.awt.Color;
  *
  * @author Miguel Flores
  */
-public class EspacioBlanco extends Pieza{
+public class EspacioBlanco extends Pieza {
 
     public EspacioBlanco() {
+    }
+
+    @Override
+    public String toString() {
+        return " ";
     }
 
     @Override
     public boolean movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 
-  
-    
 }
