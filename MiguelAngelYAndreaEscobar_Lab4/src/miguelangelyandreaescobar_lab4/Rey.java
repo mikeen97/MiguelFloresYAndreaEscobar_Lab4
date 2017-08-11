@@ -11,7 +11,7 @@ public class Rey extends Pieza{
         super(color, material);
     }
      @Override
-    public boolean movimiento(String matriz, int posx, int posy, int moverx, int movery, Color color) {
+    public boolean movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
          return false;
     }
     

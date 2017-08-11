@@ -12,10 +12,10 @@ public class Duende extends Pieza{
     }
 
     @Override
-    public boolean movimiento(Pieza matriz, int posx, int posy, int moverx, int movery, Color color) {
-        
+    public boolean movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
+        Pieza x = new EspacioBlanco();
         if (color == Color.BLACK) {
-            if (matriz[moverx][movery]== Pieza) {
+            if (matriz[moverx][movery] == x) {
           
             }
         }
@@ -24,8 +24,9 @@ public class Duende extends Pieza{
                 
             }
         }
-        
+        return true;
     }
     
     
 }
+
