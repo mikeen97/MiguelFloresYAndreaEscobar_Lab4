@@ -21,6 +21,14 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
     public static void main(String[] args) {
         String opcion = "";
         ArrayList<Jugador> ListJugadores = new ArrayList();
+        Pieza a = new Arquero();
+        Pieza m = new Mago();
+        Pieza d = new Duende();
+        Pieza r = new Rey();
+        Pieza e = new EspacioBlanco();
+        Pieza f = new Dragon();
+        Pieza c = new Caballero();
+        int posx, posy;
         while (!opcion.equalsIgnoreCase("f")) {
             opcion = JOptionPane.showInputDialog("Menu\n"
                     + "a- Agregar Jugador \n"
@@ -77,7 +85,13 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                 tablero(tablero);
                 while (vive == true) {
                     imprimir(tablero);
-                    
+                    posx = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion X de la pieza que desea mover"));
+                    posy = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
+                    if (tablero[posx][posy] == e) {
+                        JOptionPane.showMessageDialog(null, "Espacio en blanco\n"+"Ingrese nuevas posiciones");
+                        posx = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion X de la pieza que desea mover"));
+                        posy = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
+                    }
                 }
 
             }
