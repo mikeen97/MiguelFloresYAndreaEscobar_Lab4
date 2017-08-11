@@ -34,5 +34,5 @@ public abstract class Pieza {
     public String toString() {
         return "Pieza{" + "color=" + color + ", material=" + material + '}';
     }
-    public abstract boolean movimiento(String matriz, int posx, int posy, int moverx, int movery, Color color);
+    public abstract boolean movimiento(Pieza matriz, int posx, int posy, int moverx, int movery, Color color);
 }
