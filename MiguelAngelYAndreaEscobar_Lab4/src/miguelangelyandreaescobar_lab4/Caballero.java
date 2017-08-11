@@ -2,7 +2,6 @@ package miguelangelyandreaescobar_lab4;
 
 import java.awt.Color;
 
-
 public class Caballero extends Pieza {
 
     public Caballero(Color color, String material) {
@@ -12,12 +11,9 @@ public class Caballero extends Pieza {
     public Caballero() {
     }
 
-
     @Override
     public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
-        if (posx!=) {
-            
-        }
+        return 1;
     }
 
     @Override
