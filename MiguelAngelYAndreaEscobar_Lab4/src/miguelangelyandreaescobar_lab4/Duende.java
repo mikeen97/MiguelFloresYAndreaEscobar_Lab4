@@ -20,17 +20,23 @@ public class Duende extends Pieza {
     public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
         Pieza x = new EspacioBlanco();
         int move = 0;
-        if (color == Color.BLACK) {
+        if (matriz[posx][posy].getColor() == Color.BLACK) {
             if (matriz[moverx][movery] == x) {
-                move = 1;
+                if (matriz[moverx][movery] != x) {
+                    move = 3;//Comer
+                }
+                move = 1;//avanzar
             } else {
-                move = 2;
+                move = 2;//No se puede mover
             }
-        } else if (color == Color.WHITE) {
+        } else if (matriz[posx][posy].getColor() == Color.WHITE) {
             if (matriz[moverx][movery] == x) {
-                move = 1;
+                if (matriz[moverx][movery] != x) {
+                    move = 3;//Comer
+                }
+                move = 1;//Avanzar
             } else {
-                move = 2;
+                move = 2;//No se puede mover
             }
         }
         return move;
