@@ -17,7 +17,7 @@ public class Mago extends Pieza {
     }
 
     @Override
-    public int movimiento(Pieza [][]matriz, int posx, int posy, int moverx, int movery, Color color) {
+    public int movimiento(Pieza [][]matriz, int posx, int posy, int moverx, int movery, Color color) throws Excepciones{
 
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

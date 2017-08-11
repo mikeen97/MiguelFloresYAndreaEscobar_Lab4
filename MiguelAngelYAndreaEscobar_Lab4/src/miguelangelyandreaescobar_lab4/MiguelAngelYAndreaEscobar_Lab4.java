@@ -92,6 +92,9 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         posx = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion X de la pieza que desea mover"));
                         posy = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
                     }
+                    else{
+                        
+                    }
                 }
 
             }

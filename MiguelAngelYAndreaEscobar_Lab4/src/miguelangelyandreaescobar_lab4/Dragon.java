@@ -18,7 +18,7 @@ public class Dragon extends Pieza {
     }
 
     @Override
-        public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
+        public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color)throws Excepciones {
             return 1;
     }
     

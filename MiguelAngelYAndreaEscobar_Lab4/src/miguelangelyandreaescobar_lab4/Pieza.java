@@ -34,5 +34,5 @@ public abstract class Pieza {
     public String toString() {
         return "Pieza{" + "color=" + color + ", material=" + material + '}';
     }
-    public abstract int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color);
+    public abstract int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) throws Excepciones;
 }
