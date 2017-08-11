@@ -2,11 +2,11 @@ package miguelangelyandreaescobar_lab4;
 
 import java.awt.Color;
 
-public class Pieza {
+public abstract class Pieza {
    private Color color;
    private String material;
 
-    public Pieza() {
+    public  Pieza() {
     }
 
     public Pieza(Color color, String material) {
@@ -34,5 +34,5 @@ public class Pieza {
     public String toString() {
         return "Pieza{" + "color=" + color + ", material=" + material + '}';
     }
-   
+    public abstract boolean movimiento(String matriz, int posx, int posy, int moverx, int movery);
 }
