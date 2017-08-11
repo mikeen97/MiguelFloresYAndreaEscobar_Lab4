@@ -72,9 +72,13 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
             }
             if (opcion.equalsIgnoreCase("e")) {
                 JOptionPane.showMessageDialog(null, "BIENVENIDO AL JUEGO");
-                Pieza x[][] = new Pieza[10][10];
-                tablero(x);
-                castear(x);
+                boolean vive = true;
+                Pieza tablero[][] = new Pieza[10][10];
+                tablero(tablero);
+                while (vive == true) {
+                    imprimir(tablero);
+                    
+                }
 
             }
 
@@ -132,7 +136,7 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
         x[9][9] = new Caballero(Color.BLACK, material_Player2);
     }
 
-    public static void castear(Pieza[][] x) {
+    public static void imprimir(Pieza[][] x) {
         String matriz[][] = new String[10][10];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
