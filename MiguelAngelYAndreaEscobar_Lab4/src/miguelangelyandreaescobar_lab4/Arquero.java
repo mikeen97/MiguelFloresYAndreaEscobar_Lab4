@@ -18,30 +18,70 @@ public class Arquero extends Pieza {
 
     @Override
     public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) throws Excepciones {
-        int move = 0;
+        int movimiento = 0, contx = 0, fin = 0, conty = 0;
+        int pasos = posx - moverx;
+        conty = posy - movery;
+        int mx = posx - moverx, my = posy - movery;
+        int mx1 = (int) Math.abs(mx);
+        int my1 = (int) Math.abs(my);
+        int cont = 0;
+        if (mx1==my1) {
+     
+        }
         Pieza e = new EspacioBlanco();
-        if ((moverx > 9 || movery > 9) || (moverx < 0 || movery < 0)) {
-            throw new Excepciones("Fuera de tablero");
-        } else {
-            if (matriz[posx][posy].getColor() == Color.BLACK) {
-                if (matriz[moverx][movery]== e) {
-                    if (true) {
-                        
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (posx == moverx && fin == 0) {
+                    if (i == posx && j == posy) {
+                        while (contx < pasos && fin == 0) {
+                            if (matriz[posx + contx][posy] == e) {
+                                movimiento = 1;//Avanza;
+                                fin = 1;
+                            }
+                            contx++;
+                        }
+                        while (contx < pasos && fin == 0) {
+                            if (matriz[posx + contx][posy] != e) {
+                                movimiento = 2;//No Avanza;
+                                fin = 1;
+                            }
+                            contx++;
+                        }
+                    }
+                    if (fin == 0) {
+                        movimiento = 3;//No Avanza;
+                        fin = 1;
                     }
                 }
-                else{
-                    if (matriz[moverx][movery]!=e) {
-                        if (matriz[moverx][movery].getColor() == Color.BLACK) {
-                            move =2;
+                if (posy == movery && fin == 0) {
+                    if (i == posx && j == posy) {
+                        while (conty < pasos && fin == 0) {
+                            if (matriz[posx][posy + conty] == e) {
+                                movimiento = 1;//Avanza;
+                                fin = 1;
+                            }
+                            conty++;
                         }
-                        else{
-                            move = 3;
+                        while (conty < pasos && fin == 0) {
+                            if (matriz[posx][posy + conty] != e) {
+                                movimiento = 2;//No Avanza;
+                                fin = 1;
+                            }
+                            conty++;
                         }
                     }
+                    if (fin == 0) {
+                        movimiento = 3;//No Avanza;
+                        fin = 1;
+                    }
                 }
+
             }
         }
-        return move;
+
+        return movimiento;
+
     }
 
 }
