@@ -19,6 +19,9 @@ public class Dragon extends Pieza {
     @Override
     public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) throws Excepciones {
         Pieza e = new EspacioBlanco();
+        //my = mover en x
+        //mover en x 1 = mover en x
+        //mover en y 1 = mover en y
         int mx = posx - moverx, my = posy - movery;
         int mx1 = (int) Math.abs(mx);
         int my1 = (int) Math.abs(my);
@@ -27,10 +30,15 @@ public class Dragon extends Pieza {
             throw new Excepciones("Fuera de tablero");
         }
         if (matriz[posx][posy].getColor() == (Color.BLACK)) {
-            if (mx1 == my1) {
-                if (mx < 0) {//IZquierda
+            if (mx1 == my1) {//Verifico que sea diagonal
+                if (mx < 0) {//Izquierda
+                    if (my < 0) {//abajo
+
+                    } else {
+
+                    }
                     while (cont < mx1) {
-                        
+
                     }
                 }
                 if (mx > 0) {//Derecha
@@ -38,6 +46,7 @@ public class Dragon extends Pieza {
 
                     }
                 }
+
             }
         }
     }
