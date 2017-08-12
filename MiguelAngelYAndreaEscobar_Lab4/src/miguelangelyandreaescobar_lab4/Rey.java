@@ -1,6 +1,7 @@
 package miguelangelyandreaescobar_lab4;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 
 public class Rey extends Pieza {
 
@@ -17,9 +18,11 @@ public class Rey extends Pieza {
     }
 
     @Override
-    public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color)throws Excepciones{
-        int move = 1;
+    public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) throws Excepciones {
+        JOptionPane.showMessageDialog(null, "El Rey no se puede mover");
+        int move = 2;
         return move;
+
     }
 
 }

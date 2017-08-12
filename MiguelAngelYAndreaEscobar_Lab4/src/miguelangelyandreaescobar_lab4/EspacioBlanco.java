@@ -23,8 +23,16 @@ public class EspacioBlanco extends Pieza {
 
     @Override
     public int movimiento(Pieza[][] matriz, int posx, int posy, int moverx, int movery, Color color) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Pieza e = new EspacioBlanco();
+        int move = 0;
+        if (matriz[moverx][movery] != e) {
+            move = 2;
+        } else {
+            if (matriz[moverx][movery] == e) {
+                move = 1;
+            }
+        }
+        return move;
     }
 
-  
 }
