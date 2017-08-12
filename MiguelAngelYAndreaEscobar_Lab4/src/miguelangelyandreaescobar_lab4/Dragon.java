@@ -49,6 +49,7 @@ public class Dragon extends Pieza {
 
             }
         }
+        return 1;
     }
 
 }
