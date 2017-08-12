@@ -90,12 +90,17 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                     posy = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
                     int movex = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicioneeeee de la pieza que desea mover"));
                     int movey = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicioneeee de la pieza que desea mover"));
+                    JOptionPane.showConfirmDialog(null, d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK));
+                    JOptionPane.showConfirmDialog(null, "Pos inicial" + tablero[posx][posy]);
+                    JOptionPane.showConfirmDialog(null, "Pos nueva" + tablero[movex][movey]);
                     if (tablero[posx][posy].equals(d)) {
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
-                            tablero[posx][posy] = e;
+                            System.out.println("entro if 1");
+                            tablero[posx][posy] = new Duende();
                             tablero[movex][movey] = d;
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                            System.out.println("entro if 2");
                             JOptionPane.showMessageDialog(null, "No se puede mover");
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
@@ -104,74 +109,76 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                     }
                     if (tablero[posx][posy].equals(c)) {
                         c.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                        if (c.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                            System.out.println("entro if 1");
                             tablero[posx][posy] = e;
                             tablero[movex][movey] = d;
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                        if (c.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                            System.out.println("entro if 2");
                             JOptionPane.showMessageDialog(null, "No se puede mover");
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
+                        if (c.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
 
                         }
                     }
                     if (tablero[posx][posy].equals(f)) {
                         f.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                        if (f.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
                             tablero[movex][movey] = d;
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                        if (f.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
+                        if (f.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
 
                         }
                     }
                     if (tablero[posx][posy].equals(m)) {
                         m.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                        if (m.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
                             tablero[movex][movey] = d;
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                        if (m.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
+                        if (m.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
 
                         }
                     }
                     if (tablero[posx][posy].equals(r)) {
                         r.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                        if (r.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
                             tablero[movex][movey] = d;
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                        if (r.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
 
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
+                        if (r.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
 
                         }
                     }
                     if (tablero[posx][posy].equals(a)) {
                         a.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
+                        if (a.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
                             tablero[movex][movey] = d;
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
+                        if (a.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
                         }
-                        if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
+                        if (a.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 3) {
 
                         }
                     }
@@ -234,21 +241,6 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
     }
 
     public static void imprimir(Pieza[][] x) {
-        String matriz[][] = new String[10][10];
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                matriz[i][j] = x[i][j].toString();
-            }
-        }
-        for (int i = 0; i < x.length; i++) {
-            for (int j = 0; j < x.length; j++) {
-                System.out.print(x[i][j]);
-            }
-            System.out.println("");
-        }
-    }
-
-    public static void movimiento(Pieza[][] x) {
         String matriz[][] = new String[10][10];
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
