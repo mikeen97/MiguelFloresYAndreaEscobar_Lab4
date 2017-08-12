@@ -88,11 +88,12 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                     imprimir(tablero);
                     posx = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion X de la pieza que desea mover"));
                     posy = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
-                    int movex = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
-                    int movey = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion Y de la pieza que desea mover"));
+                    int movex = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicioneeeee de la pieza que desea mover"));
+                    int movey = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicioneeee de la pieza que desea mover"));
                     if (tablero[posx][posy].equals(d)) {
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
@@ -105,6 +106,8 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         c.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
+
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
@@ -118,6 +121,8 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         f.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
+
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
@@ -131,6 +136,8 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         m.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
+
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
@@ -144,6 +151,8 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         r.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
+
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
@@ -157,6 +166,7 @@ public class MiguelAngelYAndreaEscobar_Lab4 {
                         a.movimiento(tablero, posx, posy, movex, movey, Color.BLACK);
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 1) {
                             tablero[posx][posy] = e;
+                            tablero[movex][movey] = d;
                         }
                         if (d.movimiento(tablero, posx, posy, movex, movey, Color.BLACK) == 2) {
                             JOptionPane.showMessageDialog(null, "No se puede mover");
